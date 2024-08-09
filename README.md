@@ -1,2 +1,2 @@
 # nsafrov0
-nsafro is a travel website 
+print("nsafro is a travel website")
