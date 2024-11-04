@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>NSAFRO</title>
+</head>
+<body>
+    <!-- Navbar 
+    <div style="background-color:black;">
+        <nav class="navbar">
+            <label>
+                <input type="checkbox">
+                <div class="toggle">
+                    <div class="top-line common"></div>
+                    <div class="middle-line common"></div>
+                    <div class="button-line common"></div>
+                </div>
+                <div class="slide">
+                    <h1>Menu</h1>
+                    <ul>
+                        <li><a href=""><i class="fas fa-heart"></i> Preferences</a></li>
+                        <li><a href=""><i class="fas fa-hotel"></i>Reservations</a></li>
+                        <li><a href=""><i class="fas fa-car"></i>Transport</a></li>
+                        <li><a href="">sign in</a></li>
+                        <li><a href="">About us</a></li>
+                    </ul>
+                </div>
+             </label>
+    
+             <form >
+                <input class="input-search" type="search" placeholder="search..." >
+                <button class="button-search"><i class="fas fa-search"><a></a></i></button>
+             </form>
+             <div class="nav-buttons">
+               <div>
+                <button><i class="fas fa-home"><a></a></i></button>
+                <p>Home</p>
+            </div>
+               <div>
+                <button><i class="fas fa-sign-in-alt"><a></a></i></button>
+                <p>Sign in</p>
+            </div>
+                <div>
+                <button><i class="fas fa-user"><a></a></i></button>
+                <p>account</p>
+            </div>
+              </div>
+              
+          </nav><hr>  
+       </div>
+    -->
+
+    <!-- Introduction Section -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col d-flex align-items-center bg-warning" >
+                <img src="images/bug.png" alt="travel" class="img-right">
+                <div class="text-center"></div>
+                <h1>Let's make you a plan! <br>fill out the form below</h1>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <form method="post" action="/" name="user-form" id="user-form">
+                    
+                    <!-- Budget Input -->
+                    <div class="mb-3">
+                        <label for="budget" class="form-label">Give us the budget you can afford for this trip & currency</label>
+                        <div class="d-flex">
+                            <input type="number" class="form-control me-2" id="budget" name="budget" placeholder="99.9" required>
+                            <input type="text" class="form-control" id="currency" name="currency" placeholder="USD" required>
+                        </div>
+                    </div>
+
+                    <!-- Destination Input -->
+                    <div class="mb-3">
+                        <label for="destination" class="form-label">Destination</label>
+                        <input type="text" class="form-control" id="destination" name="destination" required>
+                    </div>
+
+                    <!-- Vehicle Options -->
+                    <div class="mb-3">
+                        <label class="form-label">What vehicle can you use?</label><br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="car" name="vehicle1" value="car">
+                            <label class="form-check-label" for="car">I have my own car</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rent_car" name="vehicle2" value="rent_car">
+                            <label class="form-check-label" for="rent_car">I can rent a car</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="airplane" name="vehicle3" value="airplane">i can use airplane
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="bus" name="vehicle4" value="bus">i can use bus
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="motocycle" name="vehicle5" value="motocycle">i can use motocycle
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="cycle" name="vehicle6" value="cycle">i can use cycle
+                        </div>
+
+                        <!-- Add more vehicle options similarly... -->
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="other_vehicle" name="vehicle7" value="other">
+                            <label class="form-check-label" for="other_vehicle">Other (specify below)</label>
+                        </div>
+                        <input type="text" class="form-control mt-2" name="vehicle0" placeholder="Other vehicle">
+                    </div>
+
+                    <!-- Accommodation Options -->
+                    <div class="mb-3">
+                        <label class="form-label">Where do you want to live during your trip?</label><br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="motels" name="accommodation" value="Motels" required>
+                            <label class="form-check-label" for="motels">I prefer Motels</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="house" name="accommodation" value="house" required>
+                            <label class="form-check-label" for="house">I have my house in this destination</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="airbnb" name="accommodation" value="airbnb" required>
+                            <label class="form-check-label" for="airbnb">I have my airbnb in this destination</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="camping" name="accommodation" value="camping" required>
+                            <label class="form-check-label" for="camping">I have my camping in this destination</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="beach" name="accommodation" value="beach" required>
+                            <label class="form-check-label" for="beach">I have my beach in this destination</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="nature" name="accommodation" value="nature" required>
+                            <label class="form-check-label" for="nature">I have my nature in this destination</label>
+                        </div>
+                        <!-- Add more accommodation options similarly... -->
+                        <input type="text" class="form-control mt-2" name="accommodation_other" placeholder="Other accommodation">
+                    </div>
+                    
+                    <!-- Food Preferences -->
+                    <div class="mb-3">
+                        <label class="form-label">Where do you want to eat?</label><br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="classy_restaurants" name="food" value="classy" required>
+                            <label class="form-check-label" for="classy_restaurants">I prefer to eat in classy restaurants</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="modern_restaurants" name="food" value="modern" required>
+                            <label class="form-check-label" for="modern_restaurants">I prefer to eat in modern restaurants</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="house" name="food" value="modern" required>
+                            <label class="form-check-label" for="house">I prefer to eat in my house</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="all" name="food" value="all" required>
+                            <label class="form-check-label" for="all">I can eat anywhere!</label>
+                        </div>
+                        <!-- Add more food options similarly... -->
+                    </div>
+
+                    <!-- Activity Preferences -->
+                    <div class="mb-3">
+                        <label class="form-label">What activities do you prefer?</label><br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="festival" name="activity" value="festival" required>
+                            <label class="form-check-label" for="festival">I prefer festivals</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="theatre" name="activity" value="theatre" required>
+                            <label class="form-check-label" for="theatre">I prefer theatres</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="gym" name="activity" value="gym" required>
+                            <label class="form-check-label" for="gym">I prefer gym</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="beach" name="activity" value="beach" required>
+                            <label class="form-check-label" for="beach">I prefer beach</label>
+                        </div>
+                        <!-- Add more activity options similarly... -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="nature" name="activity" value="nature" required>
+                            <label class="form-check-label" for="nature">I prefer forest, mounains and nature</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="spa" name="activity" value="spa" required>
+                            <label class="form-check-label" for="spa">I prefer spa</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="spa" name="activity" value="measum" required>
+                            <label class="form-check-label" for="measum">I prefer measum</label>
+                        </div>
+                        <input type="text" class="form-control mt-2" name="activity_other" placeholder="Other activity">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
